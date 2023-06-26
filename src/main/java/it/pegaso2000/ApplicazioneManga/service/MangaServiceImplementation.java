@@ -3,13 +3,18 @@ package it.pegaso2000.ApplicazioneManga.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import it.pegaso2000.ApplicazioneManga.model.Manga;
 import it.pegaso2000.ApplicazioneManga.repo.MangaRepo;
 
+@Service
 public class MangaServiceImplementation  implements MangaService{
 
 	private MangaRepo mRepo;
 	
+	@Autowired
 	public MangaServiceImplementation( MangaRepo mRepo ) {
 		this.mRepo = mRepo;
 	}
